@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<paciente xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="validador.xsd" dni="12345678A">
+    <nombre>Juan Español Español</nombre>
+    <direccion>
+        <calle>Avenida Ollerias</calle>
+        <numero>1</numero>
+        <ciudad>CORDOBA</ciudad>
+        <provincia>CORDOBA</provincia>
+    </direccion>
+    <telefono>957000001</telefono>
+    <telefono>687878787</telefono>
+</paciente>

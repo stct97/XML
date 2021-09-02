@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="numero">
+        <xs:restriction base="xs:integer">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="100"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="dni">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[0-9]{8}[A-Z]{1}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:element name="paciente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="nombre" type="xs:string"/>
+                <xs:element name="direccion">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="calle" type="xs:string"/>
+                            <xs:element name="numero" type="numero"/>
+                            <xs:element name="ciudad" type="xs:string"/>
+                            <xs:element name="provincia" type="xs:string"/>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                <xs:element minOccurs="0" maxOccurs="3" name="telefono" type="xs:integer"/>
+            </xs:sequence>
+            <xs:attribute name="dni" type="dni"/>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>
